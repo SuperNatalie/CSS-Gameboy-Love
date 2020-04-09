@@ -28,6 +28,9 @@ html, body, p {
     background-image: url(http://www.transparenttextures.com/patterns/cross-scratches.png);
     background-position: center;
     background-size: cover;
+    background: linear-gradient(145deg, #d0ced1, #f7f5f8);
+    box-shadow:  7px 7px 25px #b9b7ba, 
+             -7px -7px 25px #ffffff;
 }
 
 .top {
