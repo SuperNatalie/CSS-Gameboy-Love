@@ -40,13 +40,13 @@ html, body, p {
 }
 
 .top2 {
-    border-bottom: lightgray solid 3px; 
-    border-left: lightgray solid 3px; 
-    border-right: lightgray solid 3px; 
+    border-bottom: rgb(189, 184, 184)solid  3px; 
+    border-left: rgb(189, 184, 184) solid 3px; 
+    border-right:rgb(189, 184, 184)  solid 3px; 
 }
 
 .top1 {
-    border-bottom:  lightgray solid 3px; ;
+    border-bottom:  rgb(189, 184, 184) solid 3px; ;
 }
 
 
