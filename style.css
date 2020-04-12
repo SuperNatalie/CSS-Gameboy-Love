@@ -11,18 +11,37 @@
     --gb-blue:  #283593;
 }
 
-html, body, p {
+ body, p {
     margin: 0;
     padding: 0;
 }
-.case {
+
+@keyframes transform {
+    0% {
+        transform: scale(0.8)
+    }
+    50% {
+        transform: scale(1.1)
+    }
+    75% {
+    transform: scale(0.3) 
+    }
+    100% {
+        transform: scale(0.8);
+    }
+}
+
+
+#case, .case_back {
+    transform: scale(0.8);
+    display: inherit;
     margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
     border: lightgray 0.5px solid;
     height: 658px;
     width: 400px;
-    border-radius: 6px;
+    border-radius: 10px;
     border-bottom-right-radius: 40px;
     background: #eee;
     background-image: url(http://www.transparenttextures.com/patterns/cross-scratches.png);
@@ -31,6 +50,9 @@ html, body, p {
     background: linear-gradient(145deg, #d0ced1, #f7f5f8);
     box-shadow:  7px 7px 25px #b9b7ba, 
              -7px -7px 25px #ffffff;
+    transition: ease-out 1s;
+    animation-name: transform;
+    animation-duration: 2s;
 }
 
 .top {
@@ -234,16 +256,15 @@ background: #681b2a;
 .forward, .backward {
     height: 50px;
     width: 50px;
-   
     position: absolute;
     left: 6px;
     top: 4px;
     border-radius: 50%;
     border: #751a2bce solid 0.5px;
-background: linear-gradient(145deg, #89283ace, #a53d50);
-box-shadow:  5px 5px 5px #717171, 
--5px -5px 10px #7d7d7d;
-}
+    background: linear-gradient(145deg, #89283ace, #a53d50);
+    box-shadow:  5px 5px 5px #717171, 
+    -5px -5px 10px #7d7d7d;
+}   
 
 .backward {
     left: 70px;
@@ -259,13 +280,17 @@ box-shadow:  5px 5px 5px #717171,
 
 .buttons_grey {
     width: 130px;
-    height: 60px;
+    height: 43px;
     position: relative;
     margin-left: 130px;
     margin-right: auto;
-    margin-top: 40px;
+    margin-top: 42px;
     margin-bottom: auto;
     transform: rotate(-25deg);
+    box-shadow: inset 9px 9px 28px #9e9e9e, 
+    inset -9px -9px 28px #f2f2f2;
+    border: rgb(201, 200, 200) 0.5px solid;
+    border-radius: 70px;
 }
 
 .buttons_grey p {
@@ -280,23 +305,24 @@ box-shadow:  5px 5px 5px #717171,
 .play, .pause {
     width: 50px;
     height: 11px;
-    background: rgb(164, 164, 164);
-    box-shadow:  5px 5px 10px #717171, 
+    background: linear-gradient(145deg, #b1abacce, #8a8989);
+    box-shadow: 5px 5px 5px #717171, 
     -5px -5px 10px #7d7d7d;
     border-radius: 20px;
-    border: rgb(80, 79, 79) 0.5px;
+    border: rgb(40, 39, 39) 0.5px;
     position: absolute;
-    top: 15px;
-    left: 10px;
+    top: 7px;
+    left: 7px;
 }
 
+
 .play:hover, .pause:hover {
-    background: rgb(96, 96, 96);
+    background:  #8a8989;
 } 
 
 .pause {
-    left: 65px;
-    top: 35px;
+    left: 66px;
+    top: 13px;
 }
 
 .speaker {
@@ -326,10 +352,151 @@ box-shadow:  5px 5px 5px #717171,
 }
 
 
+/* Case-Back */
 
+.case_back {
+    display: none;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 10px;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
+.insert {
+    width: 280px;
+    height: 130px;
+    border-top: none;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 2px;
+    box-shadow: inset -5px -10px 16px -3px rgb(130, 130, 131);
+}
 
+.screw {
+    position: relative;
+    height: 280px;
+    width: 360px;
+    top: -140px;
+    left: 20px;
+}
 
+screwhole {
+    position: absolute;
+    width:20px;
+    height: 20px;
+    background-color: rgb(36, 35, 35);
+    border-radius: 50%;
+    box-shadow:inset 5px 5px 10px #585858, 
+    inset -5px -5px 10px #969696;
+}
 
+.screw :nth-child(2) {
+    top: 250px;
+}
 
+.screw :nth-child(3) {
+    top: 250px;
+    left: 340px;
+}
 
+.screw :nth-child(4) {
+    left: 340px;
+}
+
+.number {
+    width: 140px;
+    height: 28px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    border-radius: 2px;
+    box-shadow: inset 0px 0px 15px -4px rgba(105,105,107,1);
+    font-size: 1.5em;
+    color: rgb(60, 59, 59);
+    letter-spacing: 1px;
+}
+
+.details {
+    position: absolute;
+    margin-top: 20px;
+    left: 100px;
+    height: 100px;
+    width: 200px;
+    border-radius: 2px;
+    box-shadow: inset 0px 0px 15px -4px rgba(105,105,107,1);
+    text-shadow:  -1px 1px #FFFFFF, 0 1px 1px #4a4a4a;
+    color:  rgb(159, 159, 176);
+    font-size: 0.8em;
+    padding: 3px;
+}
+
+.grip {
+    position: absolute;
+    height: 200px;
+    width: 400px;
+    bottom: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+grip {
+    height: 10px;
+    width: 395px;
+    border-radius: 3px;
+    box-shadow:inset 5px 5px 10px #ddd9d9, 
+    inset -5px -5px 10px #979696;
+}
+
+.battery {
+    position: absolute;
+    bottom: 20px;
+    left: 60px;
+    width: 280px;
+    height: 230px;
+    border: solid 2px rgb(146, 141, 141);
+    border-radius: 3px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 2px 2px 2px #717171, 
+    -2px -2px 5px #7d7d7d;
+   
+}
+
+clip {
+    position: absolute;
+    height: 15px;
+    width: 50px;
+    border-radius: 5px;
+    left: 110px;
+    top:-15px;
+    background-color: rgb(36, 35, 35);
+    box-shadow:inset 5px 5px 10px #585858, 
+    inset -5px -5px 10px #969696;
+}
+
+nip {
+    position: absolute;
+    height: 12px;
+    width: 25px;
+    border-radius: 1px;
+    background: rgb(207, 206, 206);
+    left: 13px;
+    top:-12px;
+    box-shadow: 2px 1px 2px #706e6e, 
+    -2px -2px 4px #7d7d7d;
+}
+
+#flip {
+    position: absolute;
+    left: 45%;
+    margin-top: 10px;
+}
+
+#flip-back {
+    display: none;
+    position: absolute;
+    left: 43%;
+    margin-top: 10px;
+}
