@@ -53,6 +53,7 @@
     transition: ease-out 1s;
     animation-name: transform;
     animation-duration: 2s;
+    animation-fill-mode: none;
 }
 
 .top {
@@ -420,7 +421,7 @@ screwhole {
     position: absolute;
     margin-top: 20px;
     left: 100px;
-    height: 100px;
+    height: 110px;
     width: 200px;
     border-radius: 2px;
     box-shadow: inset 0px 0px 15px -4px rgba(105,105,107,1);
