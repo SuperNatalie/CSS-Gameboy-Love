@@ -13,14 +13,12 @@
 
  body {
     height: 98.6vh;
-    margin: 0;
+    margin: 0; 
     padding: 0;
     background-image: url(./assets/tetris-wall.jpg);
     background-position: center;
     background-size: cover;
-    animation-name: bg-move;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
+   
 }
 p {
     margin: 0;
@@ -34,17 +32,16 @@ p {
     font-family: pretendo;
     color: var(--gb-blue);
     font-size: 2em;
-    margin-top: ;
+    margin-top: 1vh ;
 }
 
 #case, .case_back {
-    margin: 0;
+   
     padding: 0;
-    transform: scale(0.8);
+    transform: scale(0.9);
     display: inherit;
-    margin-top: 10px;
+    margin-top: 10vh;
     margin-left: 10vw;
-    margin-right: auto;
     border: lightgray 0.5px solid;
     height: 658px;
     width: 400px;
@@ -58,8 +55,7 @@ p {
     box-shadow:  7px 7px 25px #b9b7ba, 
              -7px -7px 25px #ffffff;
     transition: ease-out 1s;
-    animation-name: transform;
-    animation-duration: 2s;
+    animation: transform 2s, bg-move 5s linear infinite;
 }
 
 .top {
@@ -499,16 +495,15 @@ nip {
 #flip {
     position: absolute;
     left: 25%;
-    margin-top: -30px;
+    margin-top: 10px;
 }
 
 #flip-back {
     display: none;
     position: absolute;
     left: 23%;
-    margin-top: -30px;
+    margin-top: 0px;
 }
-
 
 @keyframes transform {
     0% {
@@ -518,12 +513,57 @@ nip {
     transform: scale(0.3) 
     }
     100% {
-        transform: scale(0.8);
+        transform: scale(0.9);
     }
 }
-
+/* 
 @keyframes bg-move {
-    0% {
-        margin-left: 1px;
-   }
-}
+    0% { transform: rotate(0deg); }
+    85% { transform: rotate(-2deg); }
+    87% { transform: rotate(2deg); }
+    90% { transform: rotate(-2deg); }
+   100% { transform: rotate(0deg); }
+ }
+} */
+
+   /* for mobile-devices */
+
+@media only screen and (max-width: 600px) {
+    body {
+        position: relative;
+    }
+    #case, .case_back {
+        transform: scale(0.6);
+        margin-left: 0px;
+        position: absolute;
+        left: -15%;
+        top: -20%;
+    }
+
+    #heading {
+        left: 10%;
+        top: 5%;
+        font-size: 1em;
+    }
+
+    #flip {
+        position: absolute;
+        left: 35%;
+        margin-top: 500px;
+        border: rgb(94, 93, 93) solid 2px;
+    }
+    
+    #flip-back {
+        display: none;
+        position: absolute;
+        left: 30%;
+        margin-top: 500px;
+        border: rgb(94, 93, 93) solid 2px;
+    }
+    
+    body {
+        background-position: bottom;
+        background-size: cover;
+    }
+} 
+
