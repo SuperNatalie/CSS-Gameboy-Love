@@ -566,3 +566,42 @@ nip {
     }
 } 
 
+/* for small screens */
+
+@media only screen and (min-width: 600px) and (max-width:992px) {
+body {
+    position: relative;
+}
+#case, .case_back {
+    transform: scale(0.7);
+    position: absolute;
+    left: -10%;
+    top: -15%;
+}
+
+#heading {
+    left: 55%;
+    top: 15%;
+    font-size: 1.5em;
+}
+#flip {
+    position: absolute;
+    left: 20%;
+    margin-top: 540px;
+    border: rgb(94, 93, 93) solid 2px;
+}
+
+#flip-back {
+    display: none;
+    position: absolute;
+    left: 18%;
+    margin-top: 540px;
+    border: rgb(94, 93, 93) solid 2px;
+} }
+
+@media only screen and (min-width: 992px)  {
+    #flip, #flip-back {
+        border:  rgb(94, 93, 93) solid 2px;
+    }
+}
+    
