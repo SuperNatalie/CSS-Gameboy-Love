@@ -534,10 +534,9 @@ nip {
     }
     #case, .case_back {
         transform: scale(0.6);
-        margin-left: 0px;
         position: absolute;
-        left: -15%;
-        top: -20%;
+        left: -20%;
+        top: -15%;
     }
 
     #heading {
@@ -549,7 +548,7 @@ nip {
     #flip {
         position: absolute;
         left: 35%;
-        margin-top: 500px;
+        margin-top: 510px;
         border: rgb(94, 93, 93) solid 2px;
     }
     
@@ -557,7 +556,7 @@ nip {
         display: none;
         position: absolute;
         left: 30%;
-        margin-top: 500px;
+        margin-top: 510px;
         border: rgb(94, 93, 93) solid 2px;
     }
     
