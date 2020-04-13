@@ -12,11 +12,15 @@
 }
 
  body {
+    height: 98.6vh;
     margin: 0;
     padding: 0;
     background-image: url(./assets/tetris-wall.jpg);
-    background-size: cover;
     background-position: center;
+    background-size: cover;
+    animation-name: bg-move;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
 }
 p {
     margin: 0;
@@ -32,21 +36,6 @@ p {
     font-size: 2em;
     margin-top: ;
 }
-
-
-
-@keyframes transform {
-    0% {
-        transform: scale(0.8)
-    }
-    75% {
-    transform: scale(0.3) 
-    }
-    100% {
-        transform: scale(0.8);
-    }
-}
-
 
 #case, .case_back {
     margin: 0;
@@ -71,7 +60,6 @@ p {
     transition: ease-out 1s;
     animation-name: transform;
     animation-duration: 2s;
-    animation-fill-mode: none;
 }
 
 .top {
@@ -510,15 +498,32 @@ nip {
 
 #flip {
     position: absolute;
-    left: 45%;
+    left: 25%;
     margin-top: -30px;
 }
 
 #flip-back {
     display: none;
     position: absolute;
-    left: 43%;
+    left: 23%;
     margin-top: -30px;
+}
 
-    
+
+@keyframes transform {
+    0% {
+        transform: scale(0.8)
+    }
+    75% {
+    transform: scale(0.3) 
+    }
+    100% {
+        transform: scale(0.8);
+    }
+}
+
+@keyframes bg-move {
+    0% {
+        margin-left: 1px;
+   }
 }
