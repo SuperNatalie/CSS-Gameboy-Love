@@ -9,6 +9,7 @@
 <body>
     <p id="heading">CSS Gameboy-love</p>
     <div id="case">
+        <div class="button-start" onclick="playSound3()"></div>
         <div class="top">
             <div class="top1"></div>
             <div class="top2"></div>
@@ -27,7 +28,9 @@
                 <div class="dot"></div>
                 <p>BATTERY</p>
             </div>
-            <div class="display"></div>
+            <div class="display">
+                <p id="title">Nintendo ® </p>
+            </div>
         </div>
         <div class="cross">
         <img src="https://img.icons8.com/color/110/000000/xbox-cross.png"/>
@@ -38,13 +41,19 @@
             <p>TM</p>
         </div>
         <div class="buttons_red">
-            <div class="forward">
+            <div class="forward" onclick="playSound1()">
                 <p>B</p>
             </div>
-            <div class="backward">
+            <div class="backward" onclick="playSound2()">
                 <p>A</p>
             </div>
+            
         </div>
+            <audio id="song1" src="assets/181602__coby12388__enerjump.wav"></audio>
+            <audio id="song2" src="assets/222571__coby12388__minijump.wav"></audio>
+            <audio id="song3" src="assets/Game Boy Klingelton (Einschalten Sound) als MP3-Download.mp3"></audio>
+
+
         <div class="buttons_grey">
             <div class="play">
                 <p>SELECT</p>
@@ -106,6 +115,7 @@
 
     <button id="flip-back" onclick="flipBack()">
         Click to flip back</button>
+
 
 
     <script src="./assets/main.js"></script>
