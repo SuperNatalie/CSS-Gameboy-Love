@@ -37,7 +37,6 @@ p {
 }
 
 #case, .case_back {
-   
     padding: 0;
     transform: scale(0.9);
     display: inherit;
@@ -65,6 +64,17 @@ p {
     grid-template-rows: 30px;
 }
 
+.top2 {
+    border-bottom: rgb(189, 184, 184)solid  3px; 
+    border-left: rgb(189, 184, 184) solid 3px; 
+    border-right:rgb(189, 184, 184)  solid 3px; 
+}
+
+.top1 {
+    border-bottom:  rgb(189, 184, 184) solid 3px; ;
+}
+
+
 .button-start {
     position: absolute;
     height: 15px;
@@ -78,17 +88,6 @@ p {
 .button-start:hover {
 margin-left: 16px;
 }
-
-.top2 {
-    border-bottom: rgb(189, 184, 184)solid  3px; 
-    border-left: rgb(189, 184, 184) solid 3px; 
-    border-right:rgb(189, 184, 184)  solid 3px; 
-}
-
-.top1 {
-    border-bottom:  rgb(189, 184, 184) solid 3px; ;
-}
-
 
 .screen {
     margin-top: 25px;

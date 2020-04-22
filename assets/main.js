@@ -19,8 +19,6 @@ function flipBack() {
     Button1.style.display = "inherit"
     Button2.style.display = "none";
     location = location;
-    
-
 }
 
 
@@ -31,6 +29,7 @@ function playSound1() {
 function playSound2() {
     player2.play();
 }
+
 function playSound3() {
     player3.play();
     screenTitle.style.opacity = "1";
